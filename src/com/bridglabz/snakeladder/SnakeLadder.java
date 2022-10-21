@@ -40,9 +40,25 @@ public class SnakeLadder {
 
         }
     }
+    //UC4-REPEAT TILL PLAYER REACHES POSITION 100
+    //IN CASE PLAYER REACHES BELOW 0, PLAYER RESTART FROM 0
+    static final int WIN_POSITION=100;
 
     public static void main(String[] args) {
         System.out.println("Welcome to snake ladder simulator");
+        while(playerPosition<=WIN_POSITION) {
+
+
+            int dieValue=dieRoll();
+            System.out.println("Die:" + dieValue);
+
+            int option =getOption();
+            System.out.println("Option" + option);
+            playGame(option,dieValue);
+
+        }
+
+
     }
 }
 
